@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+    <html lang="en-GB">
+        <head>
+            <title>NFT'S FOR ALL - Shop</title>
+            <link rel="icon" type="image/x-icon" href="favicon.ico">
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="style2.css">
+        </head>
+        <body>
+            <div class="topnav">
+                <a class="main" href="main.html">NFT'S FOR ALL</a>
+                <a class="active" href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+                <input class="search" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+              </div>
+            <sort>
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('odd')"> Odd</button>
+                    <button class="btn" onclick="filterSelection('even')"> Even</button>
+                  </div>
+                </sort>
+            <section>
+                <table id="myTable">
+                    <div class="filterDiv odd">
+                        <pr>1</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>2</pr>
+                    </div>
+                    <div class="filterDiv odd">
+                        <pr>3</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>4</pr>
+                    </div>
+                    <div class="filterDiv odd">
+                        <pr>5</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>6</pr>
+                    </div>
+                    <div class="filterDiv odd">
+                        <pr>7</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>8</pr>
+                    </div>
+                    <div class="filterDiv odd">
+                        <pr>9</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>10</pr>
+                    </div>
+                    <div class="filterDiv odd">
+                        <pr>11</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>12</pr>
+                    </div>
+                    <div class="filterDiv odd">
+                        <pr>13</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>14</pr>
+                    </div>
+                    <div class="filterDiv odd">
+                        <pr>15</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>16</pr>
+                    </div>
+                    <div class="filterDiv odd">
+                        <pr>17</pr>
+                    </div>
+                    <div class="filterDiv even">
+                        <pr>18</pr>
+                    </div>
+                </div>
+            </section>
+            <script>
+                filterSelection("all")
+                function filterSelection(c) {
+                  var x, i;
+                  x = document.getElementsByClassName("filterDiv");
+                  if (c == "all") c = "";
+                  for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                  }
+                }
+                
+                function w3AddClass(element, name) {
+                  var i, arr1, arr2;
+                  arr1 = element.className.split(" ");
+                  arr2 = name.split(" ");
+                  for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                  }
+                }
+                
+                function w3RemoveClass(element, name) {
+                  var i, arr1, arr2;
+                  arr1 = element.className.split(" ");
+                  arr2 = name.split(" ");
+                  for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                    }
+                  }
+                  element.className = arr1.join(" ");
+                }
+                
+                // Add active class to the current button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function(){
+                    var current = document.getElementsByClassName("active");
+                    current[1].className = current[1].className.replace(" active", "");
+                    this.className += " active";
+                  });
+                }
+
+
+                //search
+                function myFunction() {
+                    var input, filter, table, div, pr, i, txtValue;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    div = document.getElementsByTagName("div");
+                    for (i = 0; i < div.length; i++) {
+                        pr = div[i].getElementsByTagName("pr")[0];
+                        if (pr) {
+                            txtValue = pr.textContent || pr.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                div[i].style.display = "";
+                            } else {
+                                div[i].style.display = "none";
+                            }
+                        }       
+                    }
+                }
+                </script>
+        </body>
+    </html>
