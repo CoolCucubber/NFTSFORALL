@@ -31,11 +31,17 @@ h2 {
   float: left;
   background-color: #2196F3;
   color: #ffffff;
-  width: 100px;
-  line-height: 100px;
+  width: 250px;
   text-align: center;
-  margin: 2px;
+  margin: 7px;
   display: none;
+}
+.filterDiv img {
+  vertical-align: text-top;
+  width: auto;
+  height: 230px;
+}
+.filterDiv pr {
 }
 
 .show {
