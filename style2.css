@@ -65,6 +65,7 @@ h2 {
   border-bottom-right-radius: 0px;
 }
 .filterDiv pr {
+  word-wrap: break-word;
   width: 210px;
   margin-top: none;
   margin: 8px;
