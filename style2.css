@@ -27,21 +27,52 @@ h2 {
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: rgb(247, 247, 247);
 }
+.test {
+  margin-bottom: 5px;
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 225px;
+  text-align: center;
+  margin: 7px;
+  display: none;
+}
 .filterDiv {
   float: left;
   background-color: #2196F3;
   color: #ffffff;
   width: 250px;
-  text-align: center;
+  text-align: left;
   margin: 7px;
+  margin-bottom: none;
   display: none;
+  padding-bottom: 3px;
+  border-radius: 15px;
 }
 .filterDiv img {
-  vertical-align: text-top;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding-bottom: none;
+  margin-bottom: none;
+  text-align: center;
   width: auto;
   height: 230px;
+  border-radius: 10px;
+  border-bottom: 2px solid white;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 .filterDiv pr {
+  width: 210px;
+  margin-top: none;
+  margin: 8px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 12px;
+  display: block;
+  text-overflow: ellipsis;
 }
 
 .show {
@@ -66,9 +97,4 @@ h2 {
 
 .btn:hover {
   background-color: #ddd;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
 }
