@@ -59,8 +59,11 @@ a {
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #ff00aa;
     color: white;
+  }
+  .topnav a.cart {
+    float: right;
   }
   
 .btn.active {

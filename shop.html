@@ -13,6 +13,7 @@
                 <a class="active" href="shop.html">Shop</a>
                 <a href="contact.html">Contact</a>
                 <input class="search" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+                <a class="cart" href="cart.html"><img src="cart.png" height="30px"></a>
               </div>
             <sort>
                 <div id="myBtnContainer">
@@ -26,7 +27,7 @@
                     <div class="filterDiv test odd" id="image1">
                         <img class="test odd" src="images/image1.png">
                         <pr>1234567890987654321234567890987654321</pr>
-                        <button class="test odd button" id="imag1" onclick="document.getElementById('imag1').innerHTML = 'Purchased'">Buy</button>
+                        <button class="test odd button" id="imag1" onclick="document.getElementById('imag1').innerHTML = 'Purchased'; addToCart('1234567890987654321234567890987654321')">Buy</button>
                     </div>
                     <div class="filterDiv even">
                         <pr>2</pr>
@@ -82,5 +83,6 @@
                 </div>
             </section>
             <script src="shop.js"></script>
+            <script src="cart.js"></script>
         </body>
     </html>
