@@ -33,16 +33,19 @@ h2 {
 .test {
   margin-bottom: 5px;
   float: left;
-  background-color: #2196F3;
+  background-color: #ff00aa;
   color: #ffffff;
   width: 225px;
   text-align: center;
   margin: 7px;
   display: none;
 }
+.cartitem {
+  float: left;
+}
 .filterDiv {
   float: left;
-  background-color: #2196F3;
+  background-color: #ff00aa;
   color: #ffffff;
   width: 250px;
   text-align: left;

@@ -1,3 +1,10 @@
+const products = {
+    "1234567890987654321234567890987654321": {
+        "img": "images/image1.png",
+        "price": "$1000"
+    }
+}
+
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -31,10 +38,74 @@ function addToCart(product) {
         cart = JSON.parse(cartCookie)
     }
 
-    cart[product] = true
+    if (cart[product]) {
+        alert('you have already added this to your cart')
+        return
+    }
 
-    console.log(cart)
+    cart[product] = true
 
     setCookie("cart", JSON.stringify(cart), 9999999999)
 
+}
+
+function remToCart(product) {
+    const cartCookie = getCookie("cart")
+
+    let cart = null
+    if (cartCookie.length == 0) {
+        cart = {}
+    } else {
+        cart = JSON.parse(cartCookie)
+    }
+
+    cart[product] = false
+
+    setCookie("cart", JSON.stringify(cart), 9999999999)
+
+}
+
+function showCart() {
+    const cartCookie = getCookie("cart")
+
+    let cart = null
+    if (cartCookie.length == 0) {
+        cart = {}
+    } else {
+        cart = JSON.parse(cartCookie)
+    }
+
+    console.log(cart)
+
+    const cartSection = document.getElementById("cart")
+
+    for (item of Object.keys(cart)) {
+        if (cart[item] == true) {
+            const p = document.createElement("p")
+            const img = document.createElement("img")
+            const button = document.createElement("button")
+            img.src = products[item].img
+            button.setAttribute("onclick", `remToCart('${item}'); location.reload();`)
+            button.innerHTML = "remove"
+            p.className="cartitem"
+            p.innerHTML = item
+            p.appendChild(img)
+            p.appendChild(button)
+            console.log(p)
+            cartSection.appendChild(p)
+        }
+    }
+}
+
+const cartCookie = getCookie("cart")
+
+let cart = null
+if (cartCookie.length == 0) {
+    cart = {}
+} else {
+    cart = JSON.parse(cartCookie)
+}
+
+if (cart["1234567890987654321234567890987654321"]) {
+    document.getElementById('imag1').innerHTML = 'Added To Cart'
 }
