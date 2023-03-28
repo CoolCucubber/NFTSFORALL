@@ -40,9 +40,6 @@ h2 {
   margin: 7px;
   display: none;
 }
-.cartitem {
-  float: left;
-}
 .filterDiv {
   float: left;
   background-color: #ff00aa;
@@ -108,4 +105,34 @@ h2 {
 
 .btn:hover {
   background-color: #ddd;
+}
+
+.cartpro {
+  border: 5px red;
+  background-color: red;
+}
+
+.cartimg {
+  display: block;
+  text-align: center;
+  width: auto;
+  height: 230px;
+  border-radius: 10px;
+  border: 2px white solid;
+  float: left;
+}
+
+.cartbut{
+  margin-top: 110px;
+  float: right;
+}
+
+.cartitem {
+  width: 99%;
+  text-align: center;
+  border: 5px #ff00aa solid;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #ff00aa;
+  display: inline-block;
 }
