@@ -88,7 +88,7 @@ function showCart() {
             button.setAttribute("onclick", `remToCart('${item}'); location.reload();`)
             img.className="cartimg"
             button.className="cartbut"
-            button.innerHTML = "remove"
+            button.innerHTML = "Remove"
             p.className="cartitem"
             p.innerHTML = item
             p.appendChild(img)

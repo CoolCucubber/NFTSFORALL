@@ -123,8 +123,17 @@ h2 {
 }
 
 .cartbut{
-  margin-top: 110px;
+  margin-top: 90px;
   float: right;
+  background-color: #4CAF50;
+  border: 0px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .cartitem {
