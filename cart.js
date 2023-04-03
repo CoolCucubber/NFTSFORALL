@@ -1,5 +1,5 @@
 const products = {
-    "1234567890987654321234567890987654321": {
+    "Purple haired lady reading a book.": {
         "img": "images/image1.png",
         "price": "$1000"
     }
@@ -108,6 +108,6 @@ if (cartCookie.length == 0) {
     cart = JSON.parse(cartCookie)
 }
 
-if (cart["1234567890987654321234567890987654321"]) {
+if (cart["Purple haired lady reading a book."]) {
     document.getElementById('imag1').innerHTML = 'Added To Cart'
 }
